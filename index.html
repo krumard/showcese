@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071529">
+  <meta name="description" content="นิทรรศการแสดงผลงานและนวัตกรรมดิจิทัล การประเมินครูผู้ช่วย ครั้งที่ 4 นายสมปราชญ์ อุส่าห์">
+  <title>SRNR INNOVATION SHOWCASE | ประเมินครูผู้ช่วย ครั้งที่ 4</title>
+  <link rel="icon" href="./assets/srnr-logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://script.google.com">
+  <link rel="preconnect" href="https://script.googleusercontent.com">
+  <style>
+    :root {color-scheme:dark;--bg:#071529;--white:#f3f7ff;--gold:#e9ba66;}
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%;width:100%;margin:0;overflow:hidden;background:var(--bg)}
+    body{font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;color:var(--white)}
+    #showcase{display:block;position:fixed;inset:0;width:100%;height:100%;height:100dvh;
+      border:0;background:var(--bg)}
+    #loading{position:fixed;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;
+      padding:24px;text-align:center;background:
+      radial-gradient(ellipse 62% 55% at 50% 38%,rgba(32,88,145,.35),transparent 80%),
+      linear-gradient(155deg,#061327,#0c2140 60%,#061427);transition:opacity .5s,visibility .5s}
+    #loading.ready{opacity:0;visibility:hidden;pointer-events:none}
+    .load-box{width:min(440px,100%);display:flex;flex-direction:column;align-items:center}
+    .logo{width:104px;height:104px;border-radius:50%;object-fit:cover;background:#e6eaff;
+      border:3px solid rgba(242,193,103,.75);box-shadow:0 8px 48px rgba(0,0,0,.3)}
+    .eyebrow{margin:24px 0 5px;font-size:11px;letter-spacing:.22em;color:var(--gold);font-weight:700}
+    h1{font-size:clamp(21px,4vw,30px);line-height:1.35;margin:5px 0 8px;letter-spacing:.02em}
+    .subtitle{font-size:13px;line-height:1.7;opacity:.8;margin:0}
+    .indicator{width:165px;height:3px;margin:26px auto 13px;border-radius:10px;background:#ffffff21;overflow:hidden}
+    .indicator:before{content:"";display:block;height:100%;width:40%;border-radius:9px;background:linear-gradient(90deg,#679ff1,#f7d789);animation:flow 1.2s ease-in-out infinite alternate}
+    @keyframes flow{from{transform:translateX(-25%)}to{transform:translateX(210%)}}
+    .status{color:#bdcde1;font-size:12px;margin:0}
+    .direct{color:#d9c08c;text-decoration:underline;text-underline-offset:3px}
+    .help{margin-top:15px;font-size:12px;line-height:1.7;color:#adc0d8}
+    #backup{position:fixed;right:14px;bottom:14px;z-index:3;display:flex;align-items:center;
+      gap:6px;max-width:70vw;padding:8px 10px;border:1px solid #ffffff23;border-radius:999px;
+      background:rgba(6,19,39,.88);box-shadow:0 3px 24px #0003;font-size:11px;
+      color:#cbd8eb;text-decoration:none;opacity:.54;transition:opacity .2s,background .2s}
+    #backup:hover,#backup:focus-visible{opacity:1;background:#142c50;outline:2px solid transparent}
+    @media(prefers-reduced-motion:reduce){.indicator:before{animation:none}#loading{transition:none}}
+  </style>
+</head>
+<body>
+  <!-- หน้าเว็บ GitHub เป็นตัวแสดงผลเต็มจอ ไม่มีการเปลี่ยน URL ไปยัง Apps Script -->
+  <iframe
+    id="showcase"
+    title="SRNR Innovation Showcase – นิทรรศการการประเมินครูผู้ช่วย"
+    src="https://script.google.com/macros/s/AKfycbwabKwoP17Wqvlkgj9vo0rlK_YIinrwUbX5Jx9Fh4uY24Qv0faK08HRGGQZIUUnvaDP9g/exec"
+    loading="eager"
+    allow="fullscreen; clipboard-read; clipboard-write"
+    allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin"
+  ></iframe>
+
+  <div id="loading" role="status" aria-live="polite">
+    <div class="load-box">
+      <img class="logo" src="./assets/srnr-logo.jpg" alt="ตราวิทยาลัยเทคนิคสุรนารี">
+      <p class="eyebrow">SRNR INNOVATION SHOWCASE 2026</p>
+      <h1>ยินดีต้อนรับคณะกรรมการการประเมิน</h1>
+      <p class="subtitle">การประเมินเตรียมความพร้อมและพัฒนาอย่างเข้ม<br>ตำแหน่งครูผู้ช่วย ครั้งที่ 4<br>นายสมปราชญ์ อุส่าห์</p>
+      <div class="indicator" aria-hidden="true"></div>
+      <p class="status" id="status">กำลังเปิดนิทรรศการและเชื่อมต่อข้อมูล...</p>
+      <div class="help" id="help" hidden>หากหน้าเว็บไม่แสดง อาจเกิดจากการตั้งค่าการฝังเว็บหรือเบราว์เซอร์<br>
+        <a class="direct" href="https://script.google.com/macros/s/AKfycbwabKwoP17Wqvlkgj9vo0rlK_YIinrwUbX5Jx9Fh4uY24Qv0faK08HRGGQZIUUnvaDP9g/exec" target="_blank" rel="noopener noreferrer">เปิดโปรแกรมโดยตรง (สำรอง) ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <a id="backup" href="https://script.google.com/macros/s/AKfycbwabKwoP17Wqvlkgj9vo0rlK_YIinrwUbX5Jx9Fh4uY24Qv0faK08HRGGQZIUUnvaDP9g/exec" target="_blank" rel="noopener noreferrer"
+     title="ใช้เมื่อเว็บฝังไม่แสดงผล">↗ เปิดสำรอง</a>
+  <noscript>โปรดเปิดใช้งาน JavaScript หรือ<a href="https://script.google.com/macros/s/AKfycbwabKwoP17Wqvlkgj9vo0rlK_YIinrwUbX5Jx9Fh4uY24Qv0faK08HRGGQZIUUnvaDP9g/exec">เปิดหน้าโปรแกรมโดยตรง</a></noscript>
+  <script>
+    (() => {
+      const frame = document.getElementById('showcase');
+      const splash = document.getElementById('loading');
+      const status = document.getElementById('status');
+      let finished = false;
+      // onload แปลว่า iframe โหลดเอกสารแล้ว ไม่ใช่หลักฐานยืนยันว่า Apps Script ทำงานครบ
+      frame.addEventListener('load', () => {
+        if (finished) return;
+        finished = true;
+        setTimeout(() => splash.classList.add('ready'), 450);
+      });
+      setTimeout(() => {
+        if (!finished) {
+          status.textContent = 'กำลังรอระบบตอบกลับ...';
+          document.getElementById('help').hidden = false;
+        }
+      }, 9000);
+      // หากระบบการฝังถูกปิดโดยเบราว์เซอร์/Google จะมีปุ่มสำรองไว้เสมอ
+      setTimeout(() => {
+        if (!finished) splash.classList.add('ready');
+      }, 25000);
+    })();
+  </script>
+</body>
+</html>
